@@ -1,0 +1,67 @@
+.outer-container {
+    border: solid 1px blue;
+}
+.header {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.banner-div {
+    padding: 5px;
+    display: flex;
+    width: -webkit-fill-available;
+    border-top: solid 1px cadetblue;;
+    border-bottom: solid 1px cadetblue;
+}
+
+.order-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: cadetblue;
+    text-decoration: underline;
+}
+
+.city-card {
+    width: 25%;
+    height: 200px;
+    border-radius: 15px;
+    border: solid 1px blue;
+    margin: 20px;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-container {
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.temperature-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex: 1;
+    padding: 25px 20px;
+}
+
+.city-name {
+    font-size: 2rem;
+}
+
+.degree-div {
+    font-size: 3rem;
+}
+
+.temp-div {
+    font-size: 5rem;
+    padding-right: 5px;
+}
+
+.weather-type {
+    font-size: 1.5rem;
+}
