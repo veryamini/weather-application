@@ -1,5 +1,5 @@
 .outer-container {
-    border: solid 1px blue;
+    border: solid 1px #6265A7;
 }
 .header {
     font-size: 1.5rem;
@@ -15,12 +15,23 @@
     border-bottom: solid 1px cadetblue;
 }
 
+.border {
+    border-right: 1px solid black !important;
+}
+
 .order-btn {
     border: none;
     background: none;
     cursor: pointer;
     color: cadetblue;
     text-decoration: underline;
+    outline: none;
+}
+
+.order-btn:disabled,
+.order-btn[disabled]{
+  color: #666666;
+  cursor: auto;
 }
 
 .city-card {
@@ -33,6 +44,7 @@
     text-align: left;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .weather-container {
@@ -76,3 +88,37 @@
     justify-content: space-between;
     padding: 10px 20px;
 }
+
+.cities-input {
+    background-color: #DAE3F3;
+    border: solid 1px #6265A7;
+    outline: none;
+    padding: 5px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.55); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #6265A7;
+    width: 25%;/* Could be more or less, depending on screen size */
+  }
+
+  .weather-description {
+    font-size: 1.2rem;
+    padding: 5px 0;
+  }

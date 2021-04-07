@@ -9,11 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="container">
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        </div>
+    </div>
     <div class="outer-container" id="outer-container">
         <h1 class="header">Weather Report</h1>
         <div id="banner" class="banner-div">
-            <button id="asc" class="order-btn">ASC</button>
-            <button id="dec" class="order-btn">DEC</button>
+            <button id="asc" class="order-btn border" onclick="onSortTemperature(this)">ASC</button>
+            <button id="dec" class="order-btn" onclick="onSortTemperature(this)">DEC</button>
             <input placeholder="Search for cities..." id="search-cities" class="cities-input" value=""/>
         </div>
         <div id="pagination-div" class="pagination-div">
