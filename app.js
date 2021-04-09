@@ -35,7 +35,7 @@ function init() {
 }
 
 function renderPage() {
-    let banner = document.getElementById("banner");
+    let banner = document.querySelector("#banner");
     let weatherTypeDiv = document.createElement("div");
     weatherTypeDiv.classList.add("checkbox-div");
     let weatherTypeInnerHTML = '';
@@ -51,8 +51,8 @@ function renderPage() {
 
 function setPagination() {
     totalPages = Math.ceil(filteredCities.length / pageSize);
-    const nextPageBtn = document.getElementById("next");
-    const prevPageBtn = document.getElementById("prev");
+    const nextPageBtn = document.querySelector("#next");
+    const prevPageBtn = document.querySelector("#prev");
     if (totalPages === 0) {
         nextPageBtn.disabled = true;
         prevPageBtn.disabled = true;
@@ -88,8 +88,8 @@ function renderWeatherCards() {
     if (weatherCardsDiv) {
         weatherCardsDiv.remove();
     }
-    const paginationDiv = document.getElementById("pagination-div");
-    const outerContainer = document.getElementById("outer-container");
+    const paginationDiv = document.querySelector("#pagination-div");
+    const outerContainer = document.querySelector("#outer-container");
     let weatherContainer = document.createElement("div");
     weatherContainer.classList.add("weather-container");
     let weatherCards = pagedFilteredCities.map(city => renderWeatherCard(city));
@@ -146,7 +146,7 @@ function renderPopup(city) {
     modalContent.innerHTML = `<div class="city-name">${city.name}</div><div class="temperature-div"><div class="temp-div" style="color: ${color.color}">${city.temperature}</div><div class="degree-div">C</div></div><div class="weather-type">${city.type}</div><div class="weather-description">${city.description}</div>`;
 }
 
-document.getElementById("search-cities").addEventListener("keyup", (event) => {
+document.querySelector("#search-cities").addEventListener("keyup", (event) => {
     searchCityString = event.target.value;
     filterCities();
 });
